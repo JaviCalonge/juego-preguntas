@@ -1,39 +1,42 @@
 <script setup>
-  import { defineProps } from 'vue';
-  import { RouterLink } from 'vue-router';
+import { defineProps } from "vue";
+import { RouterLink } from "vue-router";
 
-  const {quizQuestionLength, numberOfCorrectAnswer} = defineProps(["quizQuestionLength","numberOfCorrectAnswer"])
+const { quizQuestionLength, numberOfCorrectAnswer } = defineProps([
+  "quizQuestionLength",
+  "numberOfCorrectAnswer",
+]);
 </script>
 
 <template>
   <div class="results">
     <p>Your results...</p>
-    <h1>
-      {{ numberOfCorrectAnswer }}/{{ quizQuestionLength }}
-    </h1>
-    <div v-if="numberOfCorrectAnswer === quizQuestionLength" class="confetti-container">
-      <span v-for="n in 50" :key="n" class="confetti">🎉</span>
-      <span v-for="n in 10" :key="n" class="confetti">⭐</span>
-      <p class="congratulations">🎉 ¡Felicidades! 🎉 <br> Has respondido a todas las preguntas correctamente</p>
+    <h1>{{ numberOfCorrectAnswer }}/{{ quizQuestionLength }}</h1>
+    <div>
       <button class="again-btn">
       <RouterLink to="/" class="again">Vuelve a jugar</RouterLink>
-  </button>
+    </button>
+      <div
+        v-if="numberOfCorrectAnswer === quizQuestionLength"
+        class="confetti-container"
+      >
+        <span v-for="n in 50" :key="n" class="confetti">🎉</span>
+        <span v-for="n in 10" :key="n" class="confetti">⭐</span>
+        <p class="congratulations">
+          🎉 ¡Felicidades! 🎉 <br />
+          Has respondido a todas las preguntas correctamente
+        </p>
+      </div>
+      <div v-else-if="numberOfCorrectAnswer === 0">
+        <p class="better-luck">
+          ¡No te desanimes! <br />Seguro que la próxima vez lo harás mejor
+        </p>
+      </div>
+      <div v-else>
+        <p class="better-luck">¡Bien hecho! Pero aún puedes mejorar</p>
+      </div>
     </div>
-    <div v-else-if="numberOfCorrectAnswer === 0">
-      <p class="better-luck">
-      ¡No te desanimes! <br>Seguro que la próxima vez lo harás mejor
-      </p>
-    </div>
-    <div v-else>
-      <p class="better-luck">
-      ¡Bien hecho! Pero aún puedes mejorar
-      </p>
-    </div>
-    <button class="again-btn">
-      <RouterLink to="/" class="again">Vuelve a jugar</RouterLink>
-  </button>
   </div>
-  
 </template>
 
 <style scoped>
@@ -53,7 +56,7 @@ h1 {
   background-color: lightblue;
   border: 2px solid black;
   border-radius: 10px;
-  margin-top: 20px;
+  margin: 30px 30px;
 }
 .again {
   text-decoration: none;
