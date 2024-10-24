@@ -292,7 +292,7 @@
     },
     {
         "id": 4,
-        "img": "../img/historia.jpg",
+        "img": "https://cdnlp.s3.eu-west-1.amazonaws.com/wp-paseata/wp-content/uploads/2022/07/Estamos-orgullosos-de-nuestra-historia-y-por-eso-conmemoramos-una-de-las-batallas-mas-heroicas-de-la-Reconquista.jpg",
         "name": "Historia de España",
         "questions": [
             {
@@ -389,7 +389,7 @@
     },
     {
         "id": 5,
-        "img": "../img/economia.jpg",
+        "img": "@/img/economia.jpg",
         "name": "Economía",
         "questions": [
             {
@@ -486,7 +486,7 @@
     },
     {
         "id": 6,
-        "img": "../img/filosofia.jpg",
+        "img": "./img/filosofia.jpg",
         "name": "Filosofía",
         "questions": [
             {
