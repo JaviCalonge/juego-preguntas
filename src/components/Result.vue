@@ -1,11 +1,32 @@
 <script setup>
-import { defineProps } from "vue";
+import { defineProps, onMounted } from "vue";
 import { RouterLink } from "vue-router";
 
 const { quizQuestionLength, numberOfCorrectAnswer } = defineProps([
   "quizQuestionLength",
   "numberOfCorrectAnswer",
 ]);
+
+onMounted(() => {
+  if (numberOfCorrectAnswer === quizQuestionLength) {
+    // Disparar confeti usando canvas-confetti
+    confetti({
+      particleCount: 100,
+      spread: 70,
+      origin: { y: 0.6 }
+    });
+  }
+});
+
+confetti({
+  particleCount: 200,
+  angle: 90,
+  spread: 90,
+  origin: { x: 0.5, y: 1 }, // Desde el centro inferior
+  colors: ['#f0f', '#0ff', '#ff0']
+});
+
+
 </script>
 
 <template>
@@ -18,10 +39,7 @@ const { quizQuestionLength, numberOfCorrectAnswer } = defineProps([
     </button>
       <div
         v-if="numberOfCorrectAnswer === quizQuestionLength"
-        class="confetti-container"
-      >
-        <span v-for="n in 50" :key="n" class="confetti">🎉</span>
-        <span v-for="n in 10" :key="n" class="confetti">⭐</span>
+        class="confetti-container">
         <p class="congratulations">
           ¡Felicidades!<br />
           Has respondido a todas las preguntas correctamente
@@ -72,84 +90,8 @@ h1 {
   color: black;
   margin: 20px;
 }
-
 .results {
   position: relative;
   text-align: center;
-}
-
-.confetti-container {
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  pointer-events: none;
-  overflow: hidden;
-}
-
-.confetti {
-  position: absolute;
-  top: -10%;
-  font-size: 2rem;
-  animation: fall 0.1s linear infinite;
-}
-
-@keyframes fall {
-  0% {
-    transform: translateY(-100vh);
-  }
-  100% {
-    transform: translateY(100vh);
-  }
-}
-
-.confetti:nth-child(1n) {
-  left: 10%;
-  animation-duration: 4s;
-}
-
-.confetti:nth-child(2n) {
-  left: 30%;
-  animation-duration: 6s;
-}
-
-.confetti:nth-child(3n) {
-  left: 50%;
-  animation-duration: 5s;
-}
-
-.confetti:nth-child(4n) {
-  left: 70%;
-  animation-duration: 8s;
-}
-
-.confetti:nth-child(5n) {
-  left: 90%;
-  animation-duration: 7s;
-}
-
-.confetti:nth-child(6n) {
-  left: 15%;
-  animation-duration: 4.5s;
-}
-
-.confetti:nth-child(7n) {
-  left: 35%;
-  animation-duration: 5.5s;
-}
-
-.confetti:nth-child(8n) {
-  left: 55%;
-  animation-duration: 6.5s;
-}
-
-.confetti:nth-child(9n) {
-  left: 75%;
-  animation-duration: 4.8s;
-}
-
-.confetti:nth-child(10n) {
-  left: 95%;
-  animation-duration: 6.2s;
 }
 </style>
