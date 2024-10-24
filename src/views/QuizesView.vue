@@ -16,7 +16,7 @@ watch(search, () => {
   <div>
     <header class="title">
       <h1>Cuestionario</h1>
-      <input v-model.trim="search" type="text" placeholder="Buscar..." />
+      <!-- <input v-model.trim="search" type="text" placeholder="Buscar..." /> -->
     </header>
     <div class="option-container">
         <Card class="card" v-for="quiz in quizes" :key="quiz.id" :quiz="quiz"/>

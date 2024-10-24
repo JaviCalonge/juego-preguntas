@@ -195,7 +195,7 @@
     },
     {
       "id": 3,
-      "img": "http://jobs.newscientist.com/getasset/c40a5488-11be-43b0-843f-a2e6ef9f0612/",
+      "img": "https://ieqfb.com/wp-content/uploads/estudiar-quimica.jpg",
       "name": "Química",
       "questions": [
         {
@@ -389,7 +389,7 @@
     },
     {
         "id": 5,
-        "img": "@/img/economia.jpg",
+        "img": "https://www.criptonoticias.com/wp-content/uploads/2020/08/Bitcoin-oro-precio-mercado.jpg",
         "name": "Economía",
         "questions": [
             {
@@ -486,7 +486,7 @@
     },
     {
         "id": 6,
-        "img": "./img/filosofia.jpg",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNK7sHou9tYqY6ZCSMMuGkI7tegotgW4IRDw&s",
         "name": "Filosofía",
         "questions": [
             {
