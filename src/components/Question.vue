@@ -59,17 +59,17 @@
     margin: 50px;
 }
   .question {
-    font-size: 30px;
-    
+    font-size: 26px;
+    margin: 0;
 }
   .options-container {
-    margin: 50px;
+    margin: 0 50px;
 }
   .option-value {
     background-color: white;
     width: 100%;
-    font-size: 20px;
-    padding: 8px 20px;
+    font-size: 18px;
+    padding: 8px 10px;
 }
 }
 </style>

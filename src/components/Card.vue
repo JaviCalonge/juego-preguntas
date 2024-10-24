@@ -53,6 +53,7 @@ const navigateToQuiz = () => {
   .card {
     width: 300px;
     height: 250px;
+    margin-right: 0;
   }
 }
 </style>

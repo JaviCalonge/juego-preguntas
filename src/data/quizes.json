@@ -301,7 +301,7 @@
         "options": [
           {
             "id": 1,
-            "label": "D",
+            "label": "A",
             "text": "1453",
             "isCorrect": false
           },
@@ -320,7 +320,7 @@
           },
           {
             "id": 4,
-            "label": "A",
+            "label": "D",
             "text": "1492",
             "isCorrect": true
           }
@@ -465,13 +465,13 @@
           },
           {
             "id": 3,
-            "label": "C",
+            "label": "B",
             "text": "Keynesiana",
             "isCorrect": false
           },
           {
             "id": 2,
-            "label": "B",
+            "label": "C",
             "text": "Austriaca",
             "isCorrect": true
           },
@@ -496,13 +496,13 @@
         "options": [
           {
             "id": 1,
-            "label": "B",
+            "label": "A",
             "text": "Aristóteles",
             "isCorrect": false
           },
           {
             "id": 2,
-            "label": "A",
+            "label": "B",
             "text": "Platón",
             "isCorrect": true
           },
@@ -556,25 +556,25 @@
         "options": [
           {
             "id": 1,
-            "label": "B",
+            "label": "A",
             "text": "Crítica de la razón pura",
             "isCorrect": false
           },
           {
             "id": 2,
-            "label": "C",
+            "label": "B",
             "text": "El Ser y el Tiempo",
             "isCorrect": false
           },
           {
             "id": 3,
-            "label": "D",
+            "label": "C",
             "text": "Ética",
             "isCorrect": false
           },
           {
             "id": 4,
-            "label": "A",
+            "label": "D",
             "text": "Meditaciones Metafísicas",
             "isCorrect": true
           }

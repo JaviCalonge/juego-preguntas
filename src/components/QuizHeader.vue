@@ -53,7 +53,17 @@ header h4 {
 
 @media (max-width: 1110px) {
   header {
-  justify-content: space-evenly;
+    justify-content: space-evenly;
+    gap: 0;
+}
+  header h4 {
+    font-size: 30px;
+}
+  .bar {
+    width: 200px;
+    height: 35px;
+    border: 3px solid black;
+    background-color: white;
 }
   .back {
     margin: 0;
