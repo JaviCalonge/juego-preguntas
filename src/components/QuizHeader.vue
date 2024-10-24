@@ -7,10 +7,13 @@
 
 <template>
   <header>
-      <a href="/index.html"><h4>Pregunta {{ questionStatus }}</h4></a>
+    <div>
+      <h4>Pregunta {{ questionStatus }}</h4>
       <div class="bar">
         <div class="completion" :style="{width: barPercentage}"></div>
       </div>
+    </div>
+      <RouterLink to="/"><button class="back">Vover</button></RouterLink>
     </header>
 </template>
 
@@ -19,9 +22,10 @@ header {
   margin-top: 20px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 20px;
 }
-header a {
+header h4 {
   text-decoration: none;
   font-size: 30px;
   font-weight: bold;
@@ -38,10 +42,26 @@ header a {
   width: 0;
   background-color: lightblue;
 }
+.back {
+  margin-top: -20px;
+  font-size: 24px;
+  padding: 10px;
+  background-color: lightblue;
+  border: 2px solid black;
+  border-radius: 10px;
+}
 
 @media (max-width: 1110px) {
   header {
-  flex-direction: column;
+  justify-content: space-evenly;
+}
+  .back {
+    margin: 0;
+    font-size: 14px;
+    padding: 6px;
+    background-color: lightblue;
+    border: 2px solid black;
+    border-radius: 10px;
 }
 }
 </style>

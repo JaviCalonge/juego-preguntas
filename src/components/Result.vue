@@ -11,40 +11,30 @@
     <h1>
       {{ numberOfCorrectAnswer }}/{{ quizQuestionLength }}
     </h1>
-    
     <div v-if="numberOfCorrectAnswer === quizQuestionLength" class="confetti-container">
       <span v-for="n in 50" :key="n" class="confetti">🎉</span>
       <span v-for="n in 10" :key="n" class="confetti">⭐</span>
-      
+      <p class="congratulations">🎉 ¡Felicidades! 🎉 <br> Has respondido a todas las preguntas correctamente</p>
+      <button class="again-btn">
+      <RouterLink to="/" class="again">Vuelve a jugar</RouterLink>
+  </button>
     </div>
-
-    <button class="again-btn">
-      <RouterLink to="/" class="again">Try another quiz!</RouterLink>
-    </button>
-  </div>
-</template>
-
-
-<!-- <template>
-  <div class="results">
-    <p>Your results...</p>
-    <h1>
-      {{ numberOfCorrectAnswer }}/{{ quizQuestionLength }}
-    </h1>
-  
-    <div v-if="numberOfCorrectAnswer === quizQuestionLength" class="congratulations">
-      🎉 ¡Felicidades! 🎉 <br> Has respondido a todas las preguntas correctamente
+    <div v-else-if="numberOfCorrectAnswer === 0">
+      <p class="better-luck">
+      ¡No te desanimes! <br>Seguro que la próxima vez lo harás mejor
+      </p>
     </div>
-
-    
-    <div v-else class="better-luck">
+    <div v-else>
+      <p class="better-luck">
       ¡Bien hecho! Pero aún puedes mejorar
+      </p>
     </div>
     <button class="again-btn">
-    <RouterLink to="/" class="again">Try another quiz!</RouterLink>
+      <RouterLink to="/" class="again">Vuelve a jugar</RouterLink>
   </button>
   </div>
-</template> -->
+  
+</template>
 
 <style scoped>
 .results {
@@ -86,7 +76,6 @@ h1 {
 }
 
 .confetti-container {
-  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -99,18 +88,15 @@ h1 {
   position: absolute;
   top: -10%;
   font-size: 2rem;
-  animation: fall 4s linear infinite;
-  opacity: 0;
+  animation: fall 0.1s linear infinite;
 }
 
 @keyframes fall {
   0% {
     transform: translateY(-100vh);
-    opacity: 1;
   }
   100% {
     transform: translateY(100vh);
-    opacity: 1;
   }
 }
 
