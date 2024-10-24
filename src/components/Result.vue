@@ -23,7 +23,7 @@ const { quizQuestionLength, numberOfCorrectAnswer } = defineProps([
         <span v-for="n in 50" :key="n" class="confetti">🎉</span>
         <span v-for="n in 10" :key="n" class="confetti">⭐</span>
         <p class="congratulations">
-          🎉 ¡Felicidades! 🎉 <br />
+          ¡Felicidades!<br />
           Has respondido a todas las preguntas correctamente
         </p>
       </div>
