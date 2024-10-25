@@ -11,21 +11,19 @@ onMounted(() => {
   if (numberOfCorrectAnswer === quizQuestionLength) {
     // Disparar confeti usando canvas-confetti
     confetti({
-      particleCount: 100,
+      particleCount: 200,
       spread: 70,
       origin: { y: 0.6 }
     });
-  }
-});
-
-confetti({
+    confetti({
   particleCount: 200,
   angle: 90,
   spread: 90,
   origin: { x: 0.5, y: 1 }, // Desde el centro inferior
   colors: ['#f0f', '#0ff', '#ff0']
 });
-
+  }
+});
 
 </script>
 
@@ -38,8 +36,7 @@ confetti({
       <RouterLink to="/" class="again">Vuelve a jugar</RouterLink>
     </button>
       <div
-        v-if="numberOfCorrectAnswer === quizQuestionLength"
-        class="confetti-container">
+        v-if="numberOfCorrectAnswer === quizQuestionLength">
         <p class="congratulations">
           ¡Felicidades!<br />
           Has respondido a todas las preguntas correctamente
